@@ -15,23 +15,23 @@ class People {
 	 }
 };
 class Student:private People{
-	char course[50] ; 
-	int fee ; 
-	public:
-	void set_s(){
-		set_p(); 
-		cout<<"Enter the course:" ; 
-		cin >> course ; 
-		cout<<"Enter the fee:" ; 
-		cin >> fee ; 
-	}
-	void  display_s(){
-		display_p()  ; 
-		cout<< "Course:" << course<< endl  <<"Fee:" <<fee ; 
-	}
-};
+string course[50] ; 
+int fee ; 
+public:
+void set_p(){
+set_s() ; 
+cout<<"Enter the course :" ; 
+cin>> course ; 
+cout<<"Enter the fee : ; 
+cin >> fee  ; 
+}
+void display_p{
+display_s() ; 
+cou<<"Course:" <<course <<endl <<"Fee:"<< fee  ; 
+}
+} ; 
 int main(){
-	Student s ; 
-	s.set_s() ; 
-	s.display_s() ; 
+Student s ; 
+s.set_s() ; 
+s.display_s();
 }
