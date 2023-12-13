@@ -1,0 +1,37 @@
+#include<iostream> 
+using namespace std ; 
+class People {
+	public:
+	 int id ; 
+	 char name[50] ;
+	 void set_p() {
+	 	cout<<"Enter the ID:" ; 
+	 	cin >> id ; 
+	 	cout<<"Enter the name" ; 
+	 	cin >> name ; 
+	 } 
+	 void display_p(){
+	 	cout<<endl <<"ID:" <<id <<endl <<"Name:" << name<<endl  ; 
+	 }
+};
+class Student:private People{
+	char course[50] ; 
+	int fee ; 
+	public:
+	void set_s(){
+		set_p(); 
+		cout<<"Enter the course:" ; 
+		cin >> course ; 
+		cout<<"Enter the fee:" ; 
+		cin >> fee ; 
+	}
+	void  display_s(){
+		display_p()  ; 
+		cout<< "Course:" << course<< endl  <<"Fee:" <<fee ; 
+	}
+};
+int main(){
+	Student s ; 
+	s.set_s() ; 
+	s.display_s() ; 
+}
