@@ -1,0 +1,42 @@
+//Phuong phap tru
+#include<iostream>
+using namespace std ; 
+int ucln(int a , int b ){
+if( a== 0 || b== 0 ){
+return a+ b ; 
+}
+while(a!= b){
+if(a> b){
+a=a- b ; 
+}else{
+b= b- a ; 
+}
+ }
+return a ; 
+}
+int main(){
+int a , b ; 
+cin >> a >> b ; 
+cout<<ucln(a, b);
+}
+//Phuong phap chia
+#include<iostream>
+using namespace std ; 
+int ucln(int c, int d){
+if(c==0 || d== 0 ){
+return c + d ;
+}
+while(c!= d ){
+if( c > d){
+ c= c % d;
+}else{
+d = d % c;
+}
+ }
+return c ; 
+  }
+int main(){
+int c , d ; 
+cin >> c >> d ; 
+cout<<ucln(c , d ) ; 
+}
