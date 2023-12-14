@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std ; 
+bool checkperfectnumber(int n ){
+int sum = 0 ; 
+for(int i = 1 ; i <= n/2 ; i ++){
+if( n % i == 0 ){
+sum+= i ; 
+}
+ }
+if( n == sum){
+return true ;
+}else{
+return false ; 
+}
+ }
+int main(){
+int n ; 
+cin >> n ; 
+if(checkperfectnumber(n)){
+cout<<a<<" la so hoan hao  "; 
+}else{
+cout<<a<<"khong phai so hoan hao " ; 
+}
+ }
+
+ 
