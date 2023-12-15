@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std ; 
+int checkreversenumber(int n ){
+int rem ; 
+int sodao = 0 ; 
+while( n != 0 ){
+rem = n % 10 ; 
+sodao= (sodao * 10 ) + rem ; 
+n = n / 10 ;
+}
+return sodao ; 
+}
+int main(){
+cout<<"Nhap so n :"; 
+cin >> n ; 
+if(checkreversenumber(n) == n){
+cout<<n << " la so doi xung " ; 
+}else{
+cout<<n <<" khong la so doi xung " ; 
+}
+}
