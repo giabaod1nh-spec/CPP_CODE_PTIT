@@ -1,0 +1,22 @@
+//Số Armstrong là số có giá trị bằng tổng lập phương của các chữ số trong đó.Vd:153 , 370 , 407 , ...
+GiẢI THUẬT :
+b1: biến n , remainder  ; (remainder là só dư )
+b2: Dung vong lap while
+b3: abcd= a^n + b ^ n + c ^ n + d ^ n 
+#include<iostream>
+using namespace std ; 
+int main(){
+int n , remainder , orgnumber; 
+int sum = 0 ; 
+while(orgnumber != 0 ){
+remainder = orgnumber % 10 ; 
+sum+= remainder * remainder *remainder ; 
+orgnumber = orgnumber / 10;
+}
+if(sum == n ){
+cout<< n <<"la so armstrong " ; 
+else{
+cout<< n << " khong la so armstrong " ; 
+}
+}
+
