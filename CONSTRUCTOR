@@ -1,0 +1,25 @@
+//PROGRAM TO DEMONSTRATE THE CONSTRUCTOR 
+#inlcude<iostream>
+using namespace std ; 
+class Geeks {
+public:
+int id ;
+//Default constructor
+Geeks() {
+cout<<"Defaut constructor called" ;
+id = -1 ; 
+}
+//Parameterized constructors
+Geeks(int n ){
+cout<<"Parameterized constructor callled "<<endl  ;
+id = x ; 
+}
+}; 
+int main(){
+Geeks obj1 ; 
+cout<<"Geeks id is: "<<obj1.id ; 
+Geeks obj2(21) ; 
+cout<<"Geeks id is:" <<obj2.id ; 
+return 0 ;
+}
+
