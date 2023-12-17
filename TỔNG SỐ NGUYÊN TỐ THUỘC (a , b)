@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std ; 
+int tongsonguyento(int a , int b ){
+int n ;
+int sum = 0 ; 
+if( a > b){
+for(int i = b ; i <= a ; i ++){
+if( i < 2){
+return -1 ;
+}
+for(int n = 2 ; n <= i /2 ; n ++){
+if(i % n != 0 ){
+sum+= i ; 
+} 
+}
+}
+return sum ; 
+}
+if( a< b){
+for(int i = b ; i <= a ; i ++){
+if( i < 2){
+return -1 ;
+}
+for(int n = 2 ; n <= i /2 ; n ++){
+if(i % n != 0 ){
+sum+= i ; 
+} 
+}
+}
+return sum ; 
+}
+int main(){
+int a , b ; 
+cin >> a >> b ; 
+cout<<tongsonguyento( a , b ) ; 
+}
