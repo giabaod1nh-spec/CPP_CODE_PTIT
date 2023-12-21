@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std ; 
+bool checksohoanhao(int n ){
+int sum = 0 ; 
+for(int i = 1 ; i <= n /2 ; i ++){
+if( n % i == 0 ){
+sum += i ; 
+}
+}
+if( n == sum){
+return true   ; 
+}else{
+return false ; 
+}
+}
+
+void F2(int arrA[] , unsigned sizeA , int arrB[] , unsigned &sizeB){
+sizeB= 0 ; 
+for(int i = 0 ; i < sizeA ; i ++){
+if(checksohoanhao(arrA[i])){
+arrB[sizeB++] = arrA[i] ; 
+}
+}
+}
+void sapxep(int arrB[] , unsigned sizeB){
+	for(int i = 0 ; i < sizeB - 1 ; i ++){
+		for(int j = sizeB -1 ; j > i ; j --){
+			if(arrB[j]< arrB[j-1]){
+				swap(arrB[j]  , arrB[j-1]) ; 
+			}
+		}
+	}
+}
+int main(){
+	int arrA[100] , arrB[100] ; 
+	unsigned sizeA , sizeB = 0 ; 
+	cout<<"size A:" ; 
+	cin >> sizeA ; 
+	cout<<"arrA: " ; 
+	for(int i = 0 ; i < sizeA ; i ++){
+		cin >> arrA[i] ; 
+	}
+ F2(arrA , sizeA , arrB , sizeB); 
+ sapxep(arrB , sizeB);
+ for(int i = 0 ; i< sizeB ; i ++){
+ 	cout<< arrB[i]<<" " ;  
+ }
+ cout<<"sizeB: " << sizeB ; 
+ return 0 ; 
+}
+
