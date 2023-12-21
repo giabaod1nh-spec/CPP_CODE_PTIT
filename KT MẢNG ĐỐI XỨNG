@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std ; 
+bool F1(int arrA[] , unsigned sizeA){
+for(int i = 0 ; i <=sizeA/2 ; i ++){
+if(arrA[i] != arrA[sizeA - i - 1 ] ){
+return false 
+}
+}
+return true ; 
+}
+int main(){
+int arrA[1000] ; 
+unsigned sizeA; 
+cout<<"Nhap so phan tu trong mang :" ; 
+cin >>sizeA ; 
+for(int i = 0 ; i < sizeA ; i ++){
+cin >> arrA[i] ; 
+}
+for(int i = 0 ; i <sizeA ; i ++){
+cout<<arrA[i] ; 
+}
+if(F1(arrA , sizeA)){
+cout<<"True " ; 
+}else{
+cout<<"False " ; 
+}
+}
+
