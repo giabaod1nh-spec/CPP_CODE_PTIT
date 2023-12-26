@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std ; 
+int F1(int arrA[] , int a , int b){
+int sum1 = 0 ; 
+for(int i = a ; i < = b ; i ++){
+ sum1+= arrA[i] ; 
+}
+return sum1 ; 
+}
+int F2(int arrA[] , int size){
+int sum2 = INT_MIN ; 
+for(int j = 0 ; j < size ; j ++){
+for(int k = j ; k < size ; k ++){
+F1(arrA , j , k ) ; 
+if( sum2< F2(arrA , j , k )){
+sum2 = F1(arrA , j , k ) ; 
+}
+}
+}
+return sum2 ; 
+}
+int main(){
+int arrA[1000] , size ; 
+cin >> size ; 
+for(int f = 0 ; f < size ; f++){
+cin >> arrA[f] ; 
+}
+cout<<" Max sum of sub array:" <<F2(arrA , size) ; 
+}
+
+
