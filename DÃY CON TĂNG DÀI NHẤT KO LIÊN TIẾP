@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std ; 
+int F1(int arrA[] , int size){
+	int l[100] , lmax; 
+	int maxLength = 0 ; 
+	l[0]  = 1 ; 
+	for(int i = 1 ; i < size ; i ++ ){
+		lmax = 0 ; 
+		for(int j = 0 ; j < i ; j ++){
+			if(arrA[i] > arrA[j]){
+				if(l[j] > lmax){
+					lmax = l[j]  ; 
+				}
+				l[i] = lmax + 1 ; 
+			}
+		}
+		if(l[i] > maxLength){
+			maxLength = l[i]  ; 
+		}
+	}
+	return maxLength ; 
+}
+int main(){
+	int arrA[1000] , size ; 
+	cout<<" Do dai cua mang:"  ;
+	cin >> size ; 
+	cout<<"Nhap mang: " ; 
+	for(int k = 0  ;k < size ; k ++){
+		cin >> arrA[k] ; 
+	} 
+	cout<<"Do dai cua giay tang dan co tong lon nhat :" << F1(arrA , size ) ; 
+	return 0 ; 
+}
